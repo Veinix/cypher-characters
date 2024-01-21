@@ -2,19 +2,20 @@ import React, { Dispatch, SetStateAction, useState } from 'react'
 import DropdownSelect from '../Atoms/DropdownSelect'
 import TextInput from '../Atoms/TextInput'
 import BasicButton from '../Atoms/Buttons';
-import { ICharacter, CharacterInfo, CharacterAttributes } from "@/Models/Types/CharacterTypes";
+import { PlayerCharacter, CharacterAttributes, CharacterIdentity } from "@/Models/Types/CharacterTypes";
 
 interface CharacterInputsProps {
-    setCharacterState: Dispatch<SetStateAction<ICharacter>>
+    setCharacterState: Dispatch<SetStateAction<PlayerCharacter>>
 }
 export default function CharacterInputs({ setCharacterState }: CharacterInputsProps) {
 
-    const [formValues, setFormValues] = useState<CharacterInfo>({
+    const [formValues, setFormValues] = useState<CharacterIdentity>({
         genderIdentity: "",
         name: "",
         descriptor: "",
         type: "",
-        focus: ""
+        focus: "",
+        background: ""
     })
 
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -110,19 +111,18 @@ export default function CharacterInputs({ setCharacterState }: CharacterInputsPr
 
         const characterAttributes = getAttributes(formValues.type)
 
-        const freshCharacter: ICharacter = {
-            characterInfo: { ...formValues },
-            characterAttributes: { ...characterAttributes },
-            characterStats: {
-                tier: 1,
-                effort: 0,
-                xp: 0
-            },
-            characterSkills: []
-        }
+        // const freshCharacter: PlayerCharacter = {
+        //     characterInfo: { ...formValues },
+        //     characterAttributes: { ...characterAttributes },
+        //     characterStats: {
+        //         tier: 1,
+        //         effort: 0,
+        //         xp: 0
+        //     },
+        //     characterSkills: []
+        // }
 
-        console.log(freshCharacter)
-        setCharacterState(freshCharacter)
+        // setCharacterState(freshCharacter)
     }
 
     return (
