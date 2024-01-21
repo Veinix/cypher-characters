@@ -28,14 +28,14 @@ function Navbar() {
                     <span className="hidden sm:inline">Home</span>
                 </li>
             </Link>
-
-            <Link href="/editor">
+        
+            <Link href="/">
                 <li className="p-2 hover:bg-indigo-300 rounded">
                     {/* <img src="//cdn.jsdelivr.net/npm/heroicons@1.0.1/outline/home.svg" className="w-7 sm:mx-2 mx-4 inline" /> */}
                     <span className="hidden sm:inline">Character Creator</span>
                 </li>
             </Link>
-
+        
             <Link href="/sheet">
                 <li className="p-2 hover:bg-indigo-300 rounded">
                     {/* <img src="//cdn.jsdelivr.net/npm/heroicons@1.0.1/outline/home.svg" className="w-7 sm:mx-2 mx-4 inline" /> */}
