@@ -1,13 +1,12 @@
 import AttributeBox from "../Atoms/AttributeBox"
 import { useContext } from "react"
-import { CharacterContext } from "../Organisms/CharacterCreator"
 
 function CharacterDisplay() {
-    const {characterInfo, characterAttributes} = useContext(CharacterContext)
+    // const {characterInfo, characterAttributes} = useContext(CharacterContext)
     
     return (
         <>
-            <p> <span className='font-bold'>{characterInfo.name}</span> is a <span className='font-bold'>{characterInfo.descriptor}</span> <span className='font-bold'>{characterInfo.type}</span> who <span className='font-bold'>{characterInfo.focus}</span> </p>
+            {/* <p> <span className='font-bold'>{characterInfo.name}</span> is a <span className='font-bold'>{characterInfo.descriptor}</span> <span className='font-bold'>{characterInfo.type}</span> who <span className='font-bold'>{characterInfo.focus}</span> </p>
             <div className="flex gap-3">
                 <AttributeBox
                     attribute={"Might"}
@@ -24,7 +23,7 @@ function CharacterDisplay() {
                     pool={characterAttributes.speed.pool}
                     edge={characterAttributes.speed.edge} 
                 />
-            </div>
+            </div> */}
         </>
     )
 }
