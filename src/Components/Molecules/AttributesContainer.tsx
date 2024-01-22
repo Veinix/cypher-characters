@@ -9,7 +9,7 @@ function AttributesContainer({ characterAttributes }: AttributesContainerProps) 
     const { might, intellect, speed } = characterAttributes
     return (
         <>
-            <div className="flex gap-3 w-auto justify-center ">
+            <div className="flex gap-5 justify-center">
                 <AttributeBox
                     attribute={"Might"}
                     pool={might.pool}

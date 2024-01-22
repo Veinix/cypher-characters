@@ -4,10 +4,10 @@ import CharacterSheet from "../Organisms/CharacterSheet"
 
 function ActiveCharacterSheet() {
     return (
-        <>
+        <div className="mb-2">
             <PageHeader text={"Character Sheet"} />
             <CharacterSheet characterData={undefined} />
-        </>
+        </div>
     )
 }
 

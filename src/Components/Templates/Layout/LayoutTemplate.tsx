@@ -8,16 +8,16 @@ interface LayoutTemplateProps {
 
 function LayoutTemplate({ children }: LayoutTemplateProps) {
     return (
-        <>
-            <div className="w-full min-h-screen flex-col ">
+        <div className="flex flex-col gap-2">
+            <div className="w-full min-h-screen h-auto flex-col ">
                 <Header />
                 {/* <Aside /> */}
-                <main className="w-full h-full p-4">
+                <main className="w-full min-h-full p-4">
                     {children}
                 </main>
             </div>
             <Footer />
-        </>
+        </div>
     )
 }
 
