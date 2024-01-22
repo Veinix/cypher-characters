@@ -20,10 +20,11 @@ function StatsContainer({ characterStats }: StatsContainerProps) {
     }
 
     return (
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between select-none">
             <p className="font-bold text-3xl self-center">Tier {tier}</p>
-            <div className="flex gap-2 flex-grow-[2] justify-center">
-                <span className={`font-bold text-3xl self-center `}> XP: {pointValue} </span>
+            <div className="flex gap-2 flex-grow-[2] justify-center tabular-nums">
+                <span className="font-bold text-3xl self-center"> XP </span>
+                <span className="font-bold text-3xl text-center self-center p-2 w-14 m-0 border rounded-lg">{pointValue}</span> 
                 <div className="flex justify-center items-center flex-col">
                     <p onClick={increase} className="font-bold text-xl hover:cursor-pointer">+</p>
                     <p onClick={decrease} className={`${pointValue < 1 && `invisible`} hover:cursor-pointer font-bold text-xl`}>-</p>

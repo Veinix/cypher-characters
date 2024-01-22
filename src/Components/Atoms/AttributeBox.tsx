@@ -20,16 +20,12 @@ export default function AttributeBox({ attribute, pool, edge }: AttributeBoxProp
     return (
         <div className="flex flex-col justify-center items-center rounded-lg border p-2">
             <div className="flex justify-center items-center gap-2">
-                <div className="flex justify-center items-center flex-col">
-                    {pool}
-                    <p className="font-bold"> Pool </p>
-                </div>
-                <p className={`${textColor} font-bold`}>{attribute}</p>
-                <div className="flex justify-center items-center flex-col">
-                    {edge}
-                    <p className="font-bold"> Edge </p>
-                </div>
+                {pool}
+                <p className="font-bold"> Pool </p>
+                <p className="font-bold"> Edge </p>
+                {edge}
             </div>
+            <p className={`${textColor} font-bold`}>{attribute}</p>
         </div>
     )
 }

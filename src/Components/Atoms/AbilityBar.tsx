@@ -18,14 +18,11 @@ function AbilityBar({ ability }: AbilityBarProps) {
         <div onClick={openAbility} className="flex flex-col pb-2 hover:cursor-pointer">
             <div className="flex gap-4 px-2 items-center">
                 <span className="font-bold text-md"> {abilityName} </span>
-                {isOpen &&
-                    <>
-                        {abilityCapability &&
-                            <span className="text-sm"> {abilityCapability}</span>}
-                        {abilityCost &&
-                            <span className="text-sm"> {`${abilityCost.cost} ${abilityCost.pool} point` + `${abilityCost.cost > 1 ? "s" : ""}`} </span>}
-                    </>
-                }
+
+                {abilityCapability &&
+                    <span className="text-sm"> {abilityCapability}</span>}
+                {abilityCost &&
+                    <span className="text-sm"> {`${abilityCost.cost} ${abilityCost.pool} point` + `${abilityCost.cost > 1 ? "s" : ""}`} </span>}
             </div>
             {isOpen && <p className="text-sm"> {abilityDescription} </p>}
         </div>

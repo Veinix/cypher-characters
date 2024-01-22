@@ -16,13 +16,12 @@ function SkillBar({ skill }: SkillBarProps) {
 
     return (
         <div onClick={openSkill} className="hover:cursor-pointer">
-            <p className="font-bold text-md"> {skillName} </p>
+            <span className="font-bold text-md"> {skillName} </span>
             {isOpen &&
-                <>
-                    <span className="text-sm"> {skillDescription} </span>
-                    {skillEffect && <p className="text-sm italic"> {skillEffect} </p>}
-                </>
+                <p className="text-sm"> {skillDescription} </p>
             }
+            {skillEffect && <span className="text-sm italic"> {skillEffect} </span>}
+
         </div>
     )
 }

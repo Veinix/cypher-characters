@@ -8,23 +8,26 @@ interface AttributesContainerProps {
 function AttributesContainer({ characterAttributes }: AttributesContainerProps) {
     const { might, intellect, speed } = characterAttributes
     return (
-        <div className="flex gap-3">
-            <AttributeBox
-                attribute={"Might"}
-                pool={might.pool}
-                edge={might.edge}
-            />
-            <AttributeBox
-                attribute={"Intellect"}
-                pool={intellect.pool}
-                edge={intellect.edge}
-            />
-            <AttributeBox
-                attribute={"Speed"}
-                pool={speed.pool}
-                edge={speed.edge}
-            />
-        </div>
+        <>
+            <div className="flex gap-3 w-auto justify-center ">
+                <AttributeBox
+                    attribute={"Might"}
+                    pool={might.pool}
+                    edge={might.edge}
+                />
+                <AttributeBox
+                    attribute={"Intellect"}
+                    pool={intellect.pool}
+                    edge={intellect.edge}
+                />
+                <AttributeBox
+                    attribute={"Speed"}
+                    pool={speed.pool}
+                    edge={speed.edge}
+                />
+            </div>
+        </>
+
     )
 }
 
